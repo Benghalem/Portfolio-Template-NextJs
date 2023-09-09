@@ -1,22 +1,22 @@
 import Image from "next/image";
 
 //components
-import ParticlesContainer from "../app/components/ParticlesContainer";
+//import ParticlesContainer from "../app/components/ParticlesContainer";
 import ProjectBtn from "../app/components/ProjectsBtn";
-import Avatar from "../app/components/Avatar";
+//import Avatar from "../app/components/Avatar";
 
 // fram motion
-import {motion} from "framer-motion";
+//import {motion} from "framer-motion";
 
 // variants
-import {fadeIn} from "../types/variants";
+//import {fadeIn} from "../types/variants";
 
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full ">
       {/* taxt */}
       <div className=" w-full h-full bg-gradient-to-r from-primary/10 via-black/30  ">
-        <div className="text-center flex flex-col justify-center pt-40 xl:pt-40 xl:text-left h-full container mx-auto">
+        <div className="text-center flex flex-col justify-center pt-80 xl:pt-40 xl:text-left h-full container mx-auto">
           {/* title */}
           <h1 className="h1">
             Computer Engineer <br />

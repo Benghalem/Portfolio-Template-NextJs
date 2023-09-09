@@ -20,7 +20,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
   console.log(setIndex);
   return (
-    <div className=" h-full bg-primary/30 py-32 text-center xl:text-left ">
+    <div className=" h-full bg-primary/30 py-40 text-center xl:text-left ">
       <Circles />
       <div className=" container mx-auto h-full flex flex-col items-center  xl:flex-row gap-y-20 pt-8 ">
         {/* text */}
@@ -56,7 +56,7 @@ const About = () => {
              after:bg-white/10 after:absolute after:top-0 after:right-0"
               >
                 <div className=" text-2xl xl:text-4xl font-extrabold text-accent mb-2 max-w-[100px]">
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={100} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients
@@ -68,7 +68,7 @@ const About = () => {
              after:bg-white/10 after:absolute after:top-0 after:right-0"
               >
                 <div className=" text-2xl xl:text-4xl font-extrabold text-accent mb-2 max-w-[100px]">
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={30} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients
@@ -77,7 +77,7 @@ const About = () => {
               {/* test02 */}
               <div className=" relative flex-1 after:w-[1px] ">
                 <div className=" text-2xl xl:text-4xl font-extrabold text-accent mb-2 max-w-[100px]">
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={70} duration={5} /> +
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients
@@ -106,7 +106,25 @@ const About = () => {
             })}
           </div>
           <div className=" py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center xl:items-start">
-           
+            {AboutData[index].info.map((item, itemInex) => {
+              return (
+                <div
+                  key={itemInex}
+                  className=" flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60"
+                >
+                  {/* title */}
+                  <div className=" font-light mb-2 md:mb-0">{item.title}</div>
+                  <div className=" hidden md:flex">-</div>
+                  <div>{item.stage}</div>
+                  <div className="flex gap-x-4">
+                    {/* icons */}
+                    {item.icons?.map((icon, iconInex) => {
+                      return <div className=" text-2xl text-white">{icon}</div>;
+                    })}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -24,18 +24,22 @@ import {AnimatePresence, motion} from "framer-motion";
 export default function RootLayout({children}: {children: React.ReactNode}) {
   const pathname = usePathname();
   return (
-    <AnimatePresence mode="wait">
-      <motion.div key={pathname} className="h-full">
-        <div
-          className={`page bg-site text-white bg-cover bg-no-repeat ${inter} font-inter relative`}
-        >
-          <Transition />
-          <TopLeftImg />
-          <Nav />
-          <Header />
-          {children}
-        </div>
-      </motion.div>
-    </AnimatePresence>
+    <html lang="en">
+      <body>
+        <AnimatePresence mode="wait">
+          <motion.div key={pathname} className="h-full">
+            <div
+              className={`page bg-site text-white bg-cover bg-no-repeat ${inter} font-inter relative`}
+            >
+              <Transition />
+              <TopLeftImg />
+              <Nav />
+              <Header />
+              {children}
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </body>
+    </html>
   );
 }

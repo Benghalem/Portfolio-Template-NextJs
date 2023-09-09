@@ -12,12 +12,9 @@ const ParticlesContainer = () => {
   //init
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
-    console.log(engine);
   }, []);
   const particlesLoaded = useCallback(
-    async (container: Container | undefined) => {
-      await console.log(container);
-    },
+    async (container: Container | undefined) => {},
     []
   );
 
